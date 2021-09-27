@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client App</title>
+</head>
+<body>
+    <div>
+        <h1>Show Students </h1>
+       <p id="name"> </p>
+        <p id="last_name"> </p>
+        <p id="card_number"> </p>
+        <p id="note"> </p>
+
+        
+        <label>Student card number</label><br>
+        <input id="student_card_number" ><br>
+        <button onclick="get()">Send</button> 
+    </div>
+
+    <div>
+        <h1> Add Students </h1>
+
+        <label>Student card number:</label>
+        <input id="add_student_card_number" ><br>
+        <label>Name:</label>
+        <input id="add_name" ><br>
+        <label>Last Name:</label>
+        <input id="add_last_name" ><br>
+        <label>Note:</label>
+        <input id="add_note" ><br>
+        <button onclick="post()">Send</button> 
+    </div>
+    
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function get(){
+            var student_card_number = $("#student_card_number").val();
+            $.get('http://127.0.0.1:80/?student_card_number=' + student_card_number,
+            function data(data){
+                $('#name').text('Name: '+data['name']);
+                $('#last_name').text('Last name: '+data['last_name']);
+                $('#card_number').text('Card Number: '+data['student_card_number']);
+                $('#note').text('Average Mark: '+data['note']);
+            }).fail(function (err){
+                alert('student not found')
+            })
+        }
+
+        function post(){
+            var student_card_number = $("#add_student_card_number").val();
+            var name = $("#add_name").val();
+            var last_name = $("#add_last_name").val();
+            var note = $("#add_note").val();
+            $.post('http://127.0.0.1:80/?add_student_card_number=' + student_card_number + '&add_name=' + name + '&add_last_name=' + last_name + '&add_note=' + note,
+            function data(data){
+                alert(data)
+            })
+        }
+
+    </script>
+</body>
+</html>
