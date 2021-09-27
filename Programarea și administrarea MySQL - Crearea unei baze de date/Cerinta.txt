@@ -1,0 +1,19 @@
+Creaţi o bază de date pentru un sistem, folosind ca model reţele sociale existente. Sistemul trebuie să posede informaţii despre utilizatori, precum şi informaţii despre postările pe care le publică aceştia. Pentru utilizatori, trebuie salvate următoarele informaţii:
+
+prenume;
+nume;
+data naşterii;
+locul naşterii;
+adresa de e-mail;
+numele de utilizator;
+un scurt CV;
+o fotografie.
+  
+
+Pentru stări/statusuri trebuie stocate informaţiile despre titlu, conţinut şi data publicării stării, aşadar trebuie marcat şi cui îi aparţine starea respectivă.
+
+Utilizatorii pot să devină prieteni, activitate care, desigur, trebuie notată undeva. Trebuie să salvăm şi utilizatorul care este prietenul utilizatorului nostru, când s-au împrietenit şi care este starea de prietenie (în aşteptare, acceptat, respins).
+
+Ca ajutor în realizarea acestui assignment, puteţi folosi exemplul unei relaţii din lecţia 2.3. - Chei primare şi străine.
+
+Trebuie creată o bază de date pentru un astfel de sistem, însă trebuie să creaţi şi diagrama EER de entităţi şi relaţii. Nu contează dacă începeţi cu un model şi apoi creaţi o bază de date sau invers, dar cu siguranţă se recomandă mai întâi crearea un model, deoarece este mai realist să creaţi mai întâi un plan (schiţă, respectiv un model) şi apoi să transformaţi acel model într-o bază de date reală.
