@@ -1,0 +1,15 @@
+Trebuie să obţineţi o listă cu toţi utilizatorii, împreună cu datele referitoare la faptul cărui magazin(store)
+aparţin acestea, în funcţie de datele din baza de date.
+Trebuie extrase următoarele date: first_name, last_name pentru utilizator,
+first_name şi last_name pentru managerul magazinului şi toate datele privind adresa magazinului propriu-zis (locaţia la care se află).
+
+Rezolvare:
+
+SELECT customer.first_name, customer.last_name , staff.first_name, staff.last_name, address.address
+FROM customer
+INNER JOIN store
+ON store.store_id = customer.store_id
+INNER JOIN staff
+ON staff.staff_id = store.manager_staff_id
+INNER JOIN address
+ON address.address_id = staff.address_id;
