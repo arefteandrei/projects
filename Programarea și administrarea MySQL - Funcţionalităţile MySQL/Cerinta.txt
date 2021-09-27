@@ -1,0 +1,6 @@
+Pentru baza de date creată în primul assignment, trebuie:
+
+1.să definiţi indexurile – setaţi indexurile în locurile în care ar corespunde cel mai mult; să luaţi în considerare şi setarea lui Full Text Index;
+2.să creaţi view – creaţi view cu care se va permite doar obţinerea principalelor informaţii privind utilizatorul: nume, prenume, data şi locul naşterii; 
+3.să creaţi procedurile stocate pentru ştergere, introducere şi modificarea utilizatorului; 
+4.să creaţi funcţia care pentru parametrul distribuit al numărului de identificare al utilizatorului va returna numărul complet al prietenilor săi. 
