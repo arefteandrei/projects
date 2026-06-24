@@ -37,7 +37,7 @@ For infrastructure-focused examples, see my Linux/VPS Health Check repository.
 
 ## Related infrastructure work
 
-For a more operations-focused example, see my Linux/VPS Health Check repository, which includes a server review checklist, useful commands, and a sample operational report.
+For a more operations-focused example, see my [Linux/VPS Health Check repository](https://github.com/arefteandrei/linux-vps-health-check), which includes a server review checklist, useful commands, and a sample operational report.
 
 ## Status
 
